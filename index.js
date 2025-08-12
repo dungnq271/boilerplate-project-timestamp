@@ -44,7 +44,6 @@ app.get("/api/:date?", (req, res) => {
     });
   } else if (dateParam === undefined) {
     let currentTimestamp = Date.now();
-    console.log(currentTimestamp);
     let date = new Date(Number(currentTimestamp));
     res.json({ unix: currentTimestamp, utc: date.toUTCString() });
   } else {
